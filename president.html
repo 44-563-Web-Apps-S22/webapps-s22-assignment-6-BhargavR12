@@ -7,57 +7,67 @@
 
 <body>
     <h2> President guess by BhargavReddy SingiReddy</h2>
-<form>
-<label for="input1">Enter the secret president name</label>
-<input id="input1" type="password" value="George Washington">
-<br>
-<label for="input2">Guess the president</label>
-<input id="input2" type="text">
-<input type="button" value="Check the guess" onclick="checkGuess()">
+    <form>
+        <label for="form1_secretstringname">Enter the secret president name</label>
+        <input type ="password" id="form1_secretstringname" name="form1_secretstringname" min=10 max=50 step=2 value= "George Washington"> <br>
+    
+        <label for="form1_guessname">Guess the president</label>
+        <input type ="text" id="form1_guessname" name="form1_guessname" autofocus> <br>
+    
+        <input type="button" onclick="checkGuess()" value="Check the guess">
+    </form>
 <div id="result">The correct/wrong count will be displayed here</div>
 <script>
-var correct = 0;
-var wrong = 0;
-function checkGuess() {
-secret = document.getElementById("input1").value
-guess = document.getElementById("input2").value
-out = document.getElementById("result")
-if (secret == guess) {
-correct++;
-alert("You got it right")                 
-out.innerHTML = "Correct count:" + correct + "  Wrong count:" + wrong
-} 
-else {
-wrong++;
-alert("Wrong President")
-out.innerHTML = "Correct count:" + correct + "  Wrong count:" + wrong
-}
-}
+    var correct = 0;
+    var wrong = 0; 
+    
+    function checkGuess(){
+        console.log("Getting form values")
+        secretstringname = document.getElementById("form1_secretstringname").value
+        guessname = document.getElementById("form1_guessname").value
+        out = document.getElementById("result")
+        
+        if(secretstringname==guessname){
+            correct+=1;
+            alert("You got it right")
+            out.innerHTML = correct
+        } else {
+            wrong+=1;
+            alert("Wrong President")
+            out.innerHTML = wrong
+        out.innerHTML = "correct = "+correct +"   wrong = " + wrong;
+        }
+        if(wrong >=3){
+            wrongguess()
+        }
+    }
+
+    function wrongguess(){
+        alert("Sorry,game over")
+    }
 </script>
-</form>
+
 
 <div>
     <img src="Gadwall.jpg" id="im" width="100" height="100" onclick="swapImage()">
     <script>
-        var useImage=1;
-        function swapImage(){
-            switch(useImage){
-                case 1:
-                document.getElementById('im').src="nightingale david chapman.jpg";
-                useImage=2;
-                break;
-                case 2:
-                document.getElementById('im').src="Rock Piegon.jpg";
-                useImage=3;
-                break;
-                case 3:
-                document.getElementById('im').src="Gadwall.jpg";
-                useImage=1;
-                break;
-
-
-            }
-        }
+    var useImage=1;
+    function swapImage(){
+    switch(useImage){
+    case 1:
+    document.getElementById('im').src="nightingale david chapman.jpg";
+    useImage=2;
+    break;
+    case 2:
+    document.getElementById('im').src="Rock Piegon.jpg";
+    useImage=3;
+    break;
+    case 3:
+    document.getElementById('im').src="Gadwall.jpg";
+    useImage=1;
+    break;
+    }
+    }
 
     </script>
 
