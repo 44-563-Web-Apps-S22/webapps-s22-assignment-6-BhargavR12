@@ -3,6 +3,37 @@
 <head>
 <title>Tips html page</title>
 </head>
+<style>
+    label {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    p {
+        background-color: rgb(110, 52, 204);
+        color: rgb(25, 26, 23);
+        display: inline;
+    }
+    
+    p:hover {
+        background-color: rgb(210, 186, 233);
+        color: black;
+        display: inline;
+    }
+
+    h1 {
+        background-color: rgb(243, 255, 240);
+        color: rgb(5, 47, 90);
+        display: block;
+    }
+    
+    h2 {
+        background-color: rgb(73, 52, 7);
+        color: rgb(219, 241, 13);
+        display: inline-block;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    </style>
 
 <body>
 
@@ -13,9 +44,9 @@
 <input type="number" id="check" name="check" value=20> <br>
 
 <label for="tip_increase">Enter tip increase</label>
-<input type="number" id="tip" name="tip" value=0.1> <br>
+<input type="number" id="tip" name="tip" value=0.05> <br>
 
-<input type="button" onclick="tips()" value="Find tips">
+<input type="button" onclick="tips()" value="Find tips" style="background-color: aqua;">
 </form>
 
 <p id="result">This text will be replaced </p>

@@ -4,6 +4,37 @@
 <head>
     <title>About President Lab 06</title>
 </head>
+<style>
+    label {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    p {
+        background-color: rgb(204, 52, 196);
+        color: rgb(25, 26, 23);
+        display: inline;
+    }
+    
+    p:hover {
+        background-color: rgb(203, 233, 186);
+        color: black;
+        display: inline;
+    }
+
+    h1 {
+        background-color: rgb(252, 240, 255);
+        color: rgb(5, 47, 90);
+        display: block;
+    }
+    
+    h2 {
+        background-color: rgb(73, 39, 7);
+        color: rgb(219, 241, 13);
+        display: inline-block;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    </style>
 
 <body>
     <h2> President guess by BhargavReddy SingiReddy</h2>
@@ -14,7 +45,7 @@
         <label for="form1_guessname">Guess the president</label>
         <input type ="text" id="form1_guessname" name="form1_guessname" autofocus> <br>
     
-        <input type="button" onclick="checkGuess()" value="Check the guess">
+        <input type="button" onclick="checkGuess()" value="Check the guess" style="background-color: aqua;">
     </form>
 <div id="result">The correct/wrong count will be displayed here</div>
 <script>
